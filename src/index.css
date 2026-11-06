@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Custom mapped brand theme colors for Indigo */
+  --color-indigo-50: var(--indigo-50);
+  --color-indigo-100: var(--indigo-100);
+  --color-indigo-200: var(--indigo-200);
+  --color-indigo-300: var(--indigo-300);
+  --color-indigo-400: var(--indigo-400);
+  --color-indigo-500: var(--indigo-500);
+  --color-indigo-600: var(--indigo-600);
+  --color-indigo-700: var(--indigo-700);
+  --color-indigo-800: var(--indigo-800);
+  --color-indigo-900: var(--indigo-900);
+  --color-indigo-950: var(--indigo-950);
+
+  /* Custom mapped brand theme colors for Blue */
+  --color-blue-50: var(--blue-50);
+  --color-blue-100: var(--blue-100);
+  --color-blue-200: var(--blue-200);
+  --color-blue-300: var(--blue-300);
+  --color-blue-400: var(--blue-400);
+  --color-blue-500: var(--blue-500);
+  --color-blue-600: var(--blue-600);
+  --color-blue-700: var(--blue-700);
+  --color-blue-800: var(--blue-800);
+  --color-blue-900: var(--blue-900);
+  --color-blue-950: var(--blue-950);
+}
+
+:root, .theme-indigo {
+  --indigo-50: #f5f3ff;
+  --indigo-100: #ede9fe;
+  --indigo-200: #ddd6fe;
+  --indigo-300: #c084fc;
+  --indigo-400: #a78bfa;
+  --indigo-500: #818cf8;
+  --indigo-600: #4f46e5;
+  --indigo-700: #4338ca;
+  --indigo-800: #3730a3;
+  --indigo-900: #312e81;
+  --indigo-950: #030712;
+
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-300: #93c5fd;
+  --blue-400: #60a5fa;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+  --blue-900: #1e3a8a;
+  --blue-950: #172554;
+}
+
+.theme-emerald {
+  --indigo-50: #ecfdf5;
+  --indigo-100: #d1fae5;
+  --indigo-200: #a7f3d0;
+  --indigo-300: #6ee7b7;
+  --indigo-400: #34d399;
+  --indigo-500: #10b981;
+  --indigo-600: #059669;
+  --indigo-700: #047857;
+  --indigo-800: #065f46;
+  --indigo-900: #064e3b;
+  --indigo-950: #022c22;
+
+  --blue-50: #f0fdf4;
+  --blue-100: #dcfce7;
+  --blue-200: #bbf7d0;
+  --blue-300: #86efac;
+  --blue-400: #4ade80;
+  --blue-500: #22c55e;
+  --blue-600: #16a34a;
+  --blue-700: #15803d;
+  --blue-800: #166534;
+  --blue-900: #14532d;
+  --blue-950: #052e16;
+}
+
+.theme-violet {
+  --indigo-50: #faf5ff;
+  --indigo-100: #f3e8ff;
+  --indigo-200: #e9d5ff;
+  --indigo-300: #d8b4fe;
+  --indigo-400: #c084fc;
+  --indigo-500: #a855f7;
+  --indigo-600: #9333ea;
+  --indigo-700: #7e22ce;
+  --indigo-800: #6b21a8;
+  --indigo-900: #581c87;
+  --indigo-950: #020005;
+
+  --blue-50: #fdf4ff;
+  --blue-100: #fae8ff;
+  --blue-200: #e9d5ff;
+  --blue-300: #d8b4fe;
+  --blue-400: #c084fc;
+  --blue-500: #a855f7;
+  --blue-600: #7c3aed;
+  --blue-700: #6d28d9;
+  --blue-800: #5b21b6;
+  --blue-900: #4c1d95;
+  --blue-950: #2e1065;
+}
+
+.theme-amber {
+  --indigo-50: #fffbeb;
+  --indigo-100: #fef3c7;
+  --indigo-200: #fde68a;
+  --indigo-300: #fcd34d;
+  --indigo-400: #fbbf24;
+  --indigo-500: #f59e0b;
+  --indigo-600: #d97706;
+  --indigo-700: #b45309;
+  --indigo-800: #92400e;
+  --indigo-900: #78350f;
+  --indigo-950: #050100;
+
+  --blue-50: #fff7ed;
+  --blue-100: #ffedd5;
+  --blue-200: #fed7aa;
+  --blue-300: #fdba74;
+  --blue-400: #fb923c;
+  --blue-500: #f97316;
+  --blue-600: #ea580c;
+  --blue-700: #c2410c;
+  --blue-800: #9a3412;
+  --blue-900: #7c2d12;
+  --blue-950: #431407;
+}
+
+.theme-rose {
+  --indigo-50: #fff1f2;
+  --indigo-100: #ffe4e6;
+  --indigo-200: #fecdd3;
+  --indigo-300: #fda4af;
+  --indigo-400: #fb7185;
+  --indigo-500: #f43f5e;
+  --indigo-600: #e11d48;
+  --indigo-700: #be123c;
+  --indigo-800: #9f1239;
+  --indigo-900: #881337;
+  --indigo-950: #050001;
+
+  --blue-50: #fff5f5;
+  --blue-100: #ffe3e3;
+  --blue-200: #fecdd3;
+  --blue-300: #fda4af;
+  --blue-400: #fb7185;
+  --blue-500: #f43f5e;
+  --blue-600: #db2777;
+  --blue-700: #be185d;
+  --blue-800: #9d174d;
+  --blue-900: #831843;
+  --blue-950: #500724;
+}
+
+.theme-midnight {
+  --indigo-50: #f8fafc;
+  --indigo-100: #f1f5f9;
+  --indigo-200: #e2e8f0;
+  --indigo-300: #cbd5e1;
+  --indigo-400: #94a3b8;
+  --indigo-50: #f8fafc;
+  --indigo-500: #64748b;
+  --indigo-600: #475569;
+  --indigo-700: #334155;
+  --indigo-800: #1e293b;
+  --indigo-900: #0f172a;
+  --indigo-950: #020617;
+
+  --blue-50: #ecfeff;
+  --blue-100: #cffafe;
+  --blue-200: #a5f3fc;
+  --blue-300: #67e8f9;
+  --blue-400: #22d3ee;
+  --blue-500: #06b6d4;
+  --blue-600: #0891b2;
+  --blue-700: #0369a1;
+  --blue-800: #075985;
+  --blue-900: #0c4a6e;
+  --blue-950: #082f49;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Glass sidebar & Header Styles */
+.glass-sidebar {
+  background-color: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border-right: 1px solid rgba(226, 232, 240, 0.6) !important;
+}
+.dark .glass-sidebar {
+  background-color: rgba(15, 23, 42, 0.65) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border-right: 1px solid rgba(51, 65, 85, 0.6) !important;
+}
+
+.glass-header {
+  background-color: rgba(255, 255, 255, 0.35) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.4) !important;
+}
+.dark .glass-header {
+  background-color: rgba(15, 23, 42, 0.35) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.4) !important;
+}
+
+/* Universal Glass Card */
+.glass-card {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.03) !important;
+}
+.dark .glass-card {
+  background-color: rgba(30, 41, 59, 0.5) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Extra sheer glass card */
+.glass-card-sheer {
+  background-color: rgba(255, 255, 255, 0.45) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+.dark .glass-card-sheer {
+  background-color: rgba(15, 23, 42, 0.45) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Glass Input */
+.glass-input {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+}
+.dark .glass-input {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+  border: 1px solid rgba(51, 65, 85, 0.8) !important;
+}
+.glass-input:focus {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: #4f46e5 !important;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1) !important;
+}
+.dark .glass-input:focus {
+  background-color: rgba(15, 23, 42, 0.95) !important;
+  border-color: #818cf8 !important;
+}
+
+/* Dropdowns / popovers (higher opacity glass to ensure readability) */
+.glass-dropdown {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+}
+.dark .glass-dropdown {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(51, 65, 85, 0.8) !important;
+}
+
+/* Universal automated class target overrides to guarantee complete Frosted Glass coverage */
+.bg-white.rounded-2xl, .bg-white.rounded-3xl,
+.dark .bg-gray-800.rounded-2xl, .dark .bg-gray-800.rounded-3xl,
+.dark .bg-gray-900.rounded-2xl, .dark .bg-gray-900.rounded-3xl {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.03) !important;
+}
+
+.dark .bg-white.rounded-2xl, .dark .bg-white.rounded-3xl,
+.dark .bg-slate-900.rounded-2xl, .dark .bg-slate-900.rounded-3xl,
+.dark .bg-slate-800.rounded-2xl, .dark .bg-slate-800.rounded-3xl {
+  background-color: rgba(30, 41, 59, 0.5) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Custom scrollbar styling to match the premium theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.45);
+}
